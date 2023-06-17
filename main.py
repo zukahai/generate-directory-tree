@@ -4,10 +4,11 @@ def print_directory_tree(path, prefix='', last_path='', ignore=['.git', 'target'
     print("Read file or directory: ", path)
     if os.path.basename(path) in ignore:
         return result
+    line = '└──' if os.path.basename(path) == last_path else '├──'
     if os.path.isfile(path):
-        result += prefix + '|-- ' + os.path.basename(path) + '\n'
+        result += prefix + line + os.path.basename(path) + '\n'
     elif os.path.isdir(path):
-        result += prefix + '|-- ' + os.path.basename(path) + '/\n'
+        result += prefix + line + os.path.basename(path) + '/\n'
         if os.path.basename(path) == last_path:
             sub_prefix = '    '
         else:

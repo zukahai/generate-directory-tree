@@ -4,10 +4,11 @@ def print_directory_tree(path, prefix='', last_path='', ignore=['.git', 'target'
     print("Read file or directory: ", path)
     if os.path.basename(path) in ignore:
         return
+    line = '└─── ' if os.path.basename(path) == last_path else '├─── '
     if os.path.isfile(path):
-        output_file.write(prefix + '|-- ' + os.path.basename(path) + '\n')
+        output_file.write(prefix + line + os.path.basename(path) + '\n')
     elif os.path.isdir(path):
-        output_file.write(prefix + '|-- ' + os.path.basename(path) + '\n')
+        output_file.write(prefix + line + os.path.basename(path) + '\n')
         if os.path.basename(path) == last_path:
             sub_prefix = '    '
         else:
@@ -19,8 +20,8 @@ def print_directory_tree(path, prefix='', last_path='', ignore=['.git', 'target'
             print_directory_tree(os.path.join(path, filename), prefix + sub_prefix, list_files[-1], ignore, output_file)
 
 def save_file(path, output_file):
-    with open(output_file, 'w') as output_file:
-        print_directory_tree(path, ignore=['.git', 'target', '.settings', '.vscode', '.gitkeep'], output_file=output_file, last_path=os.path.basename(path))
+    with open(output_file, 'w', encoding="utf-8") as output_file:
+        print_directory_tree(path, ignore=['.git', 'target', '.settings', '.vscode', '.gitkeep', '__pycache__', '.demo'], output_file=output_file, last_path=os.path.basename(path))
 # Ví dụ sử dụng:
 # path = "F:\CTDA\spring-mvc-starter-master\spring-mvc-starter-master"
 # output_filename = "output.txt"
