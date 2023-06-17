@@ -1,6 +1,7 @@
 import os
 
 def print_directory_tree(path, prefix='', last_path='', ignore=['.git', 'target'], result=''):
+    print("Read file or directory: ", path)
     if os.path.basename(path) in ignore:
         return result
     if os.path.isfile(path):
