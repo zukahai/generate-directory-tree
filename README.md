@@ -1,5 +1,7 @@
 #  <p align="center">Generate Directory Tree <p>
 
+<p align="center"> <img src="/.demo/GenerateDirectoryTree.png" alt="bg" /> </p>
+
 ## Overview
 Results in a directory tree of the current directory.
 
