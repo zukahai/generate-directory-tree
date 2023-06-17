@@ -1,7 +1,7 @@
 import os
 
-ignore = ['.git']
-def print_directory_tree(path, prefix='', last_path = ''):
+
+def print_directory_tree(path, prefix='', last_path = '', ignore = ['.git']):
     if os.path.basename(path) in ignore:
         return
     if os.path.isfile(path):
@@ -13,7 +13,7 @@ def print_directory_tree(path, prefix='', last_path = ''):
         else:
             sub_prefix =  '|   '
         for filename in sorted(os.listdir(path)):
-            print_directory_tree(os.path.join(path, filename), prefix + sub_prefix, sorted(os.listdir(path))[-1])
+            print_directory_tree(os.path.join(path, filename), prefix + sub_prefix, sorted(os.listdir(path))[-1], ignore)
 
 # Ví dụ sử dụng:
 path = "F:\CTDA\spring-mvc-starter-master\spring-mvc-starter-master"
