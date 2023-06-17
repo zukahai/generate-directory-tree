@@ -1,0 +1,10 @@
+|-- generate-directory-tree/
+|   |-- .gitignore
+|   |-- README.md
+|   |-- __pycache__/
+|   |   |-- main.cpython-311.pyc
+|   |   |-- mainv2.cpython-311.pyc
+|   |-- app.py
+|   |-- main.py
+|   |-- mainv2.py
+|   |-- output.txt

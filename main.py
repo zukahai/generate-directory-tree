@@ -1,25 +1,26 @@
 import os
 
-
-def print_directory_tree(path, prefix='', last_path = '', ignore = ['.git', 'target']):
+def print_directory_tree(path, prefix='', last_path='', ignore=['.git', 'target'], result=''):
     if os.path.basename(path) in ignore:
-        return
+        return result
     if os.path.isfile(path):
-        print(prefix + '|--', os.path.basename(path))
+        result += prefix + '|-- ' + os.path.basename(path) + '\n'
     elif os.path.isdir(path):
-        print(prefix + '|--', os.path.basename(path) + '/')
+        result += prefix + '|-- ' + os.path.basename(path) + '/\n'
         if os.path.basename(path) == last_path:
-            sub_prefix = '   '
+            sub_prefix = '    '
         else:
-            sub_prefix =  '|   '
+            sub_prefix = '|   '
         list_files = sorted(os.listdir(path))
-        # remove file in ignore
+        # remove files in ignore list
         list_files = [file for file in list_files if file not in ignore]
         for filename in list_files:
-            print_directory_tree(os.path.join(path, filename), prefix + sub_prefix, list_files[-1], ignore)
+            result = print_directory_tree(os.path.join(path, filename), prefix + sub_prefix, list_files[-1], ignore, result)
+    return result
 
 # Ví dụ sử dụng:
-path = "F:\CTDA\spring-mvc-starter-master\spring-mvc-starter-master"
-path.replace("\\", "\\\\")
-
-print_directory_tree(path, last_path=path.split("\\")[-1])
+# path = "F:\CTDA\spring-mvc-starter-master\spring-mvc-starter-master"
+# path.replace("\\", "\\\\")
+# path.replace("/", "\\\\")
+# directory_tree = print_directory_tree(path, last_path=path.split("\\")[-1], ignore=['.git', 'target', '.settings', '.vscode', '.gitkeep'])
+# print(directory_tree)
