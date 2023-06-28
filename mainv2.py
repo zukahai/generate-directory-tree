@@ -17,8 +17,9 @@ def print_directory_tree(path, prefix='', last_path='', ignore=['.git', 'target'
             print_directory_tree(os.path.join(path, filename), prefix + sub_prefix, list_files[-1], ignore, output_file)
 
 def save_file(path, output_file):
+    ignore_list = readIgnoreFile('ignore.txt')
     with open(output_file, 'w', encoding="utf-8") as output_file:
-        print_directory_tree(path, ignore=['.git', 'target', '.settings', '.vscode', '.gitkeep', '__pycache__', '.demo'], output_file=output_file, last_path=os.path.basename(path))
+        print_directory_tree(path, ignore=ignore_list, output_file=output_file, last_path=os.path.basename(path))
 # Ví dụ sử dụng:
 # path = "F:\CTDA\spring-mvc-starter-master\spring-mvc-starter-master"
 # output_filename = "output.txt"
@@ -26,3 +27,10 @@ def save_file(path, output_file):
 # save_file(path, output_filename)
 
 # print("Kết quả đã được lưu vào file:", output_filename)
+
+def readIgnoreFile(path):
+    with open(path, 'r', encoding="utf-8") as ignore_file:
+        ignore_list = ignore_file.read().splitlines()
+    return ignore_list
+
+print('Ignore list: ', readIgnoreFile('ignore.txt'))

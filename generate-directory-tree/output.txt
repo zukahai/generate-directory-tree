@@ -1,0 +1,19 @@
+└── generate-directory-tree
+    ├── .demo
+    │   └── GenerateDirectoryTree.png
+    ├── .gitignore
+    ├── LICENSE.md
+    ├── README.md
+    ├── __pycache__
+    │   ├── main.cpython-311.pyc
+    │   └── mainv2.cpython-311.pyc
+    ├── app.py
+    ├── generate-directory-tree
+    │   ├── app.exe
+    │   ├── ignore.txt
+    │   └── output.txt
+    ├── ignore.txt
+    ├── main.py
+    ├── mainv2.py
+    ├── output.txt
+    └── requirements.txt
