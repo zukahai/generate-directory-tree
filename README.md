@@ -44,11 +44,14 @@ Results in a directory tree of the current directory.
 
 ## Usage
 
-Download app https://github.com/zukahai/generate-directory-tree/raw/main/dist/app.exe
+Download: https://github.com/zukahai/generate-directory-tree/raw/main/generate-directory-tree.zip
+Extract zip file with download
 
 Open app.exe, choose folder to generate directory tree
 
 Results in a directory tree of the current directory in file ***output.txt***
+
+Add the file name or folder name you want to ignore at ***ignore.txt***. Each entry is recorded on one line.
 
 
 ## License
