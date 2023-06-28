@@ -4,16 +4,14 @@
     ├── .gitignore
     ├── LICENSE.md
     ├── README.md
-    ├── __pycache__
-    │   ├── main.cpython-311.pyc
-    │   └── mainv2.cpython-311.pyc
     ├── app.py
+    ├── app.spec
     ├── generate-directory-tree
-    │   ├── app.exe
     │   ├── ignore.txt
     │   └── output.txt
     ├── ignore.txt
     ├── main.py
     ├── mainv2.py
     ├── output.txt
-    └── requirements.txt
+    ├── requirements.txt
+    └── ultils.py

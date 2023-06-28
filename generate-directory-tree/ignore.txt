@@ -2,3 +2,5 @@ build
 dist
 .git
 node_modules
+__pycache__
+*.exe

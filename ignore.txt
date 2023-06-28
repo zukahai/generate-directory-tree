@@ -2,3 +2,6 @@ build
 dist
 .git
 node_modules
+generate-directory-tree
+*.txt
+*.js

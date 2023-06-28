@@ -134,6 +134,9 @@
   ('gettext',
    'C:\\Users\\HAIZUKA\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\gettext.py',
    'PYMODULE'),
+  ('gitignore_parser',
+   'C:\\Users\\HAIZUKA\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\gitignore_parser.py',
+   'PYMODULE'),
   ('gzip',
    'C:\\Users\\HAIZUKA\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\gzip.py',
    'PYMODULE'),
@@ -324,6 +327,7 @@
   ('typing',
    'C:\\Users\\HAIZUKA\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\typing.py',
    'PYMODULE'),
+  ('ultils', 'F:\\CTDA\\generate-directory-tree\\ultils.py', 'PYMODULE'),
   ('zipfile',
    'C:\\Users\\HAIZUKA\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\zipfile.py',
    'PYMODULE')])
